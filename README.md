@@ -21,9 +21,13 @@ python main.py
 System Requirement
 ---
 System:Any
+
 Processor:Any
+
 Memory:Any
+
 Display Card:Any
+
 Storage:3MB
 
 ---
