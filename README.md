@@ -4,7 +4,7 @@ Apple is a clicker Game, in which you click a Apple!
 ---
 Install Requirement
 ---
-Install Python2.7+
+Install [Python2.7+](https://www.python.org/)
 ```
 git clone https://github.com/HugoXOX3/Apple.git
 pip install pygame
