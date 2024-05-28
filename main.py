@@ -1,4 +1,5 @@
 import pygame
+import time
 
 # Initialize Pygame
 pygame.init()
@@ -9,7 +10,7 @@ window_height = 600
 window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Apple")
 
-# Set up the apple image
+#You can change the "apple.gif" in the your favourite picture
 apple_image = pygame.image.load("apple.gif")
 apple_rect = apple_image.get_rect()
 apple_rect.center = (window_width // 2, window_height // 2)
@@ -20,6 +21,10 @@ font = pygame.font.Font(None, 36)
 
 # Set up the game clock
 clock = pygame.time.Clock()
+
+# Set up the timer variables
+start_time = time.time()  # Get the current time
+gift = 0
 
 # Game loop
 running = True
@@ -33,7 +38,7 @@ while running:
             if apple_rect.collidepoint(event.pos):
                 score += 1
     
-    # Fill the window with a darker background
+    # Change this to the colour that you want
     window.fill((50, 0, 0))
     
     # Draw the apple
@@ -47,6 +52,15 @@ while running:
     
     # Update the display
     pygame.display.flip()
+    
+    # Check the timer
+    elapsed_time = time.time() - start_time
+    if elapsed_time >= 10800:  # 3 hours (3 hours * 60 minutes * 60 seconds)
+        start_time = time.time()  # Reset the timer
+        
+        #Rewrite this 2 line by using the api in steam so Player can earn from this
+        gift += 1
+        print("Received a gift!")
     
     # Limit the frame rate
     clock.tick(60)
