@@ -36,12 +36,6 @@ Critical
 This programme exist cause I saw a game on Steam call 'Banana' which's my idea come from
 
 ---
-Donation
----
-```
-BTC:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth
-```
----
 Thanks For Support
 ---
 ```
